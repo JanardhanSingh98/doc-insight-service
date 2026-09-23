@@ -1,0 +1,10 @@
+services:
+  doc-insight-service:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DIS_ENVIRONMENT: local
+      DIS_LOG_LEVEL: INFO
+    volumes:
+      - ./data:/app/data
